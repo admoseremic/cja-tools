@@ -21,6 +21,15 @@ Once you've followed the steps above, you'll need to create a credentials json f
 Once you've got that set up, you can use the tools as follows:
 
 # lookup_creator:
+This tool accepts a file which can be either a csv or SAINT classification file (the script will auto-detect which it is) and automatically do the following:
+1. Create a generic CJA lookup schema class if one does not exist already
+2. Create a field group based on your file headers
+3. Create a schema from your csv headers
+4. Create a dataset from this schema
+5. Convert your csv or SAINT file into json format and automatically upload it to the AEP dataset
 
-Command line invoke:
+Currently, everything is treated as a string (no support yet for numerics or dates or other field types). If the script detects SAINT v2.1 is used, it will get rid of all the quotations on the outside of the values and replace "" with " to mimic how SAINT v2.1 files work in Adobe Analytics.
+
+Also, I've only tested this on a Mac - not sure if it will work on a PC.
+
 python lookup_creator.py --file_path "/path/to/file.csv" --dataset_name "aep_dataset_name" --creds "/path/to/credentials.json"
