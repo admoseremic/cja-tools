@@ -30,6 +30,6 @@ This tool accepts a file which can be either a csv or SAINT classification file 
 
 Currently, everything is treated as a string (no support yet for numerics or dates or other field types). If the script detects SAINT v2.1 is used, it will get rid of all the quotations on the outside of the values and replace "" with " to mimic how SAINT v2.1 files work in Adobe Analytics.
 
-Also, I've only tested this on a Mac - not sure if it will work on a PC.
+Also, I've only tested this on a Mac - not sure if it will work on a PC. Example command line command below:
 
 python lookup_creator.py --file_path "/path/to/file.csv" --dataset_name "aep_dataset_name" --creds "/path/to/credentials.json"
