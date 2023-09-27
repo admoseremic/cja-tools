@@ -20,7 +20,7 @@ Once you've followed the steps above, you'll need to create a credentials json f
 
 Once you've got that set up, you can use the tools as follows:
 
-# lookup_creator:
+# CSV or SAINT to AEP lookup dataset tool:
 This tool accepts a file which can be either a csv or SAINT classification file (the script will auto-detect which it is) and automatically do the following:
 1. Create a generic CJA lookup schema class if one does not exist already
 2. Create a field group based on your file headers
