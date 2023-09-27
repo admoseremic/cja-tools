@@ -1,5 +1,5 @@
 # CJA Tools
-A collection of utilities designed to simplify your experience with Customer Journey Analytics (CJA).
+A collection of utilities designed to make your life a bit easier for Customer Journey Analytics (CJA).
 
 ## Prerequisites
 Before you can use these tools, you'll need to set up your API credentials.
