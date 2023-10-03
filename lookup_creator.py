@@ -124,8 +124,8 @@ def sanitize_strings(headers):
         # Replace spaces with underscores
         header = header.replace(" ", "_")
 
-        # Remove any character that is not a letter, number, or underscore
-        header = ''.join(ch for ch in header if ch.isalnum() or ch == "_")
+        # Remove any character that is not a standard ASCII letter, number, or underscore
+        header = ''.join(ch for ch in header if ord('a') <= ord(ch) <= ord('z') or ord('A') <= ord(ch) <= ord('Z') or ord('0') <= ord(ch) <= ord('9') or ch == "_")
 
         # Lowercase everything
         header = header.lower()
